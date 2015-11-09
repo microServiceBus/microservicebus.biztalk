@@ -12,6 +12,7 @@ using microServiceBus.BizTalkReceiveeAdapter.Helper.Tools;
 using System.Runtime.InteropServices;
 using System.Reflection;
 using microServiceBus.BizTalkReceiveeAdapter.RunTime;
+using Newtonsoft.Json.Linq;
 
 namespace microServiceBus.BizTalkReceiveeAdapter.Helper
 {
@@ -117,7 +118,8 @@ namespace microServiceBus.BizTalkReceiveeAdapter.Helper
             try
             {
                 dynamic message = input.message;
-                dynamic context = input.context;
+                JObject context = Newtonsoft.Json.JsonConvert.DeserializeObject( Newtonsoft.Json.JsonConvert.SerializeObject(input.context));
+
                 var submitURI = string.Format("microservicebus://{0}", (string)input.location);
                 // Create IBaseMessage messages
                 if (_bizTalkMessaging ==null)
@@ -125,34 +127,34 @@ namespace microServiceBus.BizTalkReceiveeAdapter.Helper
 
                 var btsMessage = _bizTalkMessaging.CreateMessageFromString(submitURI, (string)message);
 
-                if (context.IntegrationId != null)
-                    btsMessage.Context.Write("IntegrationId", ns, (string)context.IntegrationId);
-                if (context.CorrelationId != null)
-                    btsMessage.Context.Write("CorrelationId", ns, (string)context.CorrelationId);
-                if (context.Created != null)
-                    btsMessage.Context.Write("Created", ns, (string)context.Created);
-                if (context.CreatedBy != null)
-                    btsMessage.Context.Write("CreatedBy", ns, (string)context.CreatedBy);
-                if (context.InterchangeId != null)
-                    btsMessage.Context.Write("InterchangeId", ns, (string)context.InterchangeId);
-                if (context.IsBinary != null)
-                    btsMessage.Context.Write("IsBinary", ns, (bool)context.IsBinary);
-                if (context.IsCorrelation != null)
-                    btsMessage.Context.Write("IsCorrelation", ns, (bool)context.IsCorrelation);
-                if (context.IsRequestResponse != null)
-                    btsMessage.Context.Write("IsRequestResponse", ns, (bool)context.IsRequestResponse);
-                if (context.ItineraryId != null)
-                    btsMessage.Context.Write("ItineraryId", ns, (string)context.ItineraryId);
-                if (context.Length != null)
-                    btsMessage.Context.Write("Length", ns, (int)context.Length);
-                if (context.OrganizationId != null)
-                    btsMessage.Context.Write("OrganizationId", ns, (string)context.OrganizationId);
-                if (context.Sender != null)
-                    btsMessage.Context.Write("Sender", ns, (string)context.Sender);
+                if (context["IntegrationId"] != null)
+                    btsMessage.Context.Write("IntegrationId", ns, (string)context["IntegrationId"]);
+                if (context["CorrelationId"] != null)
+                    btsMessage.Context.Write("CorrelationId", ns, (string)context["CorrelationId"]);
+                if (context["Created"] != null)
+                    btsMessage.Context.Write("Created", ns, (string)context["Created"]);
+                if (context["CreatedBy"] != null)
+                    btsMessage.Context.Write("CreatedBy", ns, (string)context["CreatedBy"]);
+                if (context["InterchangeId"] != null)
+                    btsMessage.Context.Write("InterchangeId", ns, (string)context["InterchangeId"]);
+                if (context["IsBinary"] != null)
+                    btsMessage.Context.Write("IsBinary", ns, (bool)context["IsBinary"]);
+                if (context["IsCorrelation"] != null)
+                    btsMessage.Context.Write("IsCorrelation", ns, (bool)context["IsCorrelation"]);
+                if (context["IsRequestResponse"] != null)
+                    btsMessage.Context.Write("IsRequestResponse", ns, (bool)context["IsRequestResponse"]);
+                if (context["ItineraryId"] != null)
+                    btsMessage.Context.Write("ItineraryId", ns, (string)context["ItineraryId"]);
+                if (context["Length"] != null)
+                    btsMessage.Context.Write("Length", ns, (int)context["Length"]);
+                if (context["OrganizationId"] != null)
+                    btsMessage.Context.Write("OrganizationId", ns, (string)context["OrganizationId"]);
+                if (context["Sender"] != null)
+                    btsMessage.Context.Write("Sender", ns, (string)context["Sender"]);
 
-                foreach (var variable in context.Variables)
+                foreach (var variable in context["Variables"])
                 {
-                    btsMessage.Context.Write(variable.Variable, valiablesNs, variable.Value);
+                    btsMessage.Context.Write((string)variable["Variable"], valiablesNs, (string)variable["Value"]);
                 }
 
                 // Submit the messages
