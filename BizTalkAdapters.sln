@@ -1,0 +1,72 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "microServiceBus.BizTalkReceiveAdapter.Management", "microServiceBus.BizTalkReceiveAdapter.Management\microServiceBus.BizTalkReceiveAdapter.Management.csproj", "{9C9C2E10-E91B-4E9E-B57C-E3835176EF54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "microServiceBus.BizTalkReceiveeAdapter.RunTime", "microServiceBus.BizTalkReceiveeAdapter.RunTime\microServiceBus.BizTalkReceiveeAdapter.RunTime.csproj", "{2CD75F99-2123-4F15-B296-D77B47515B9C}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "TestClient", "TestClient\TestClient.njsproj", "{15EC515F-7656-4AA8-90A6-CC99808677B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C2B346C2-BE27-467E-A188-295B653379A8}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "microServiceBus.BizTalkReceiveeAdapter.Helper", "microServiceBus.BizTalkReceiveeAdapter.Helper\microServiceBus.BizTalkReceiveeAdapter.Helper.csproj", "{9225FA47-E979-4E0E-AD4F-D57E32261C63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "microServiceBus.BizTalkReceiveeAdapter.TestConsole", "microServiceBus.BizTalkReceiveeAdapter.TestConsole\microServiceBus.BizTalkReceiveeAdapter.TestConsole.csproj", "{C47C2C61-D44D-4A2A-9E50-0CF425C10FDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C9C2E10-E91B-4E9E-B57C-E3835176EF54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C9C2E10-E91B-4E9E-B57C-E3835176EF54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C9C2E10-E91B-4E9E-B57C-E3835176EF54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C9C2E10-E91B-4E9E-B57C-E3835176EF54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CD75F99-2123-4F15-B296-D77B47515B9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CD75F99-2123-4F15-B296-D77B47515B9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CD75F99-2123-4F15-B296-D77B47515B9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CD75F99-2123-4F15-B296-D77B47515B9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15EC515F-7656-4AA8-90A6-CC99808677B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15EC515F-7656-4AA8-90A6-CC99808677B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15EC515F-7656-4AA8-90A6-CC99808677B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15EC515F-7656-4AA8-90A6-CC99808677B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9225FA47-E979-4E0E-AD4F-D57E32261C63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9225FA47-E979-4E0E-AD4F-D57E32261C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9225FA47-E979-4E0E-AD4F-D57E32261C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9225FA47-E979-4E0E-AD4F-D57E32261C63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C47C2C61-D44D-4A2A-9E50-0CF425C10FDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C47C2C61-D44D-4A2A-9E50-0CF425C10FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C47C2C61-D44D-4A2A-9E50-0CF425C10FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C47C2C61-D44D-4A2A-9E50-0CF425C10FDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://blogical.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = microServiceBus.BizTalkReceiveeAdapter.RunTime\\microServiceBus.BizTalkReceiveeAdapter.RunTime.csproj
+		SccProjectName1 = microServiceBus.BizTalkReceiveeAdapter.RunTime
+		SccLocalPath1 = microServiceBus.BizTalkReceiveeAdapter.RunTime
+		SccProjectUniqueName2 = microServiceBus.BizTalkReceiveAdapter.Management\\microServiceBus.BizTalkReceiveAdapter.Management.csproj
+		SccProjectName2 = microServiceBus.BizTalkReceiveAdapter.Management
+		SccLocalPath2 = microServiceBus.BizTalkReceiveAdapter.Management
+		SccProjectUniqueName3 = TestClient\\TestClient.njsproj
+		SccProjectName3 = TestClient
+		SccLocalPath3 = TestClient
+		SccProjectUniqueName4 = microServiceBus.BizTalkReceiveeAdapter.Helper\\microServiceBus.BizTalkReceiveeAdapter.Helper.csproj
+		SccProjectName4 = microServiceBus.BizTalkReceiveeAdapter.Helper
+		SccLocalPath4 = microServiceBus.BizTalkReceiveeAdapter.Helper
+		SccProjectUniqueName5 = microServiceBus.BizTalkReceiveeAdapter.TestConsole\\microServiceBus.BizTalkReceiveeAdapter.TestConsole.csproj
+		SccProjectName5 = microServiceBus.BizTalkReceiveeAdapter.TestConsole
+		SccLocalPath5 = microServiceBus.BizTalkReceiveeAdapter.TestConsole
+	EndGlobalSection
+EndGlobal
