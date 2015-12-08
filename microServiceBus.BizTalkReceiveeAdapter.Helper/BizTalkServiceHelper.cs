@@ -159,10 +159,12 @@ namespace microServiceBus.BizTalkReceiveeAdapter.Helper
 
                 // Submit the messages
                 var result = _bizTalkMessaging.SubmitMessage(btsMessage);
+                System.Diagnostics.Trace.WriteLine(result, "microServiceBus.com");
                 return result;
             }
             catch (Exception ex)
             {
+                System.Diagnostics.Trace.TraceError(ex.Message, "microServiceBus.com");
                 return ex.Message;
             }
 
